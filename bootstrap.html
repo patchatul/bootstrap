@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building with Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <style>
+        #col,
+        .col {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>How to use Bootstrap</h1>
+        <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">bootstrap</a>
+        <p>CSS file : link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"
+        </p>
+        <p>JavaScript file : script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"<br />
+            script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"</p>
+    </header>
+    <main>
+        <div class="container text-center">
+            <h2>div container row col</h2>
+            <div class="row">
+                <div class="col-12" id="col">
+                    using container row col grid system
+                </div>
+                <div class="col-12 order-xl-last" id="col">
+                    with 6 breakpoints / until it's less than px
+                </div>
+                <div class="col-6" id="col">
+                    xs 576px class="col-6"
+                </div>
+                <div class="col-6" id="col">
+                    xs 576px class="col-6"
+                </div>
+                <div class="col-sm-6" id="col">
+                    sm≥576px "col-sm-6"
+                </div>
+                <div class="col-sm-5" id="col">
+                    sm≥576px "col-sm-5"
+                </div>
+                <div class="col-md-6" id="col">
+                    md≥768px "col-md-6"
+                </div>
+                <div class="col-md-4" id="col">
+                    md≥768px "col-md-4"
+                </div>
+                <div class="col-lg-4" id="col">
+                    lg≥992px "col-lg-4"
+                </div>
+                <div class="col-lg-6" id="col">
+                    lg≥992px "col-lg-6"
+                </div>
+                <div class="col-xl-5" id="col">
+                    xl≥1200px "col-xl-5"
+                </div>
+                <div class="col-xl-6" id="col">
+                    xl≥1200px "col-xl-6"
+                </div>
+                <div class="col-xxl-6" id="col">
+                    xxl≥1400px "col-xxl-6"
+                </div>
+                <div class="col-xxl-6" id="col">
+                    xxl≥1400px "col-xxl-6"
+                </div>
+            </div>
+        </div>
+        <div class="container p-2 bg-info">
+            <h2>div class attribute & values</h2>
+            <div class="row justify-content-center align-items-end">
+                <div class="col-sm-2" id="col">
+                    container text-center overflow-hidden
+                </div>
+                <div class="col-sm-2" id="col">
+                    justify-content-center start end around evenly between
+                </div>
+                <div class="col-sm-2" id="col">
+                    row align-items-end
+                </div>
+                <div class="col-sm-2" id="col">
+                    row row-cols-auto/-md-4
+                </div>
+                <div class="col-sm-2" id="col">
+                    col order-last first
+                </div>
+                <div class="col-sm-2 me-auto ms-auto mb-4" id="col">
+                    me-auto ms-auto mb-4 margin
+                </div>
+                <div class="col-sm-2 p-2" id="col">
+                    p-2 padding
+                </div>
+                <div class="col-sm-2 px-3 py-3" id="col">
+                    px-3 horizontal padding, py-3 vertical padding
+                </div>
+                <div class="col-sm-2 g-0" id="col">
+                    g-2 all gutters, g-0 remove gutter
+                </div>
+                <div class="col-sm-2 gx-4 gy-4" id="col">
+                    gx-4 horizontal gutters, gy-4 vertical gutters
+                </div>
+                <div class="col-sm-2 offset-2" id="col">
+                    offset-2
+                </div>
+                <div class="grid g-col-sm-3 g-start-1" style="--bs-columns: 2; --bs-gap: 1rem;--bs-rows: 1;row-gap: 2;"
+                    id="col">
+                    grid g-col g-col-sm-3 g-start-1" style="--bs-columns: 2; --bs-gap: 1rem;--bs-rows: 1;row-gap: 2;"
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2>content elements-html tags</h2>
+            <div class="row row-cols-sm-4">
+                <div class="col">
+                    <hr class="border border-danger border-2 opacity-50">
+                    <p>hr class="border border-danger border-2 opacity-50"</p>
+                </div>
+                <div class="col">
+                    <hr class="border border-primary border-4 opacity-75">
+                    <p>hr class="border border-primary border-4 opacity-75"</p>
+                </div>
+                <div class="col">
+                    <a href="#" style="--bs-link-opacity: .5">link</a>
+                    <p>a style="--bs-link-opacity: .5"</p>
+                </div>
+                <div class="col">
+                    <p><abbr title="use abbr title" class="initialism">abbr class="initialism"</abbr></p>
+                </div>
+                <div class="col">
+                    <code>&lt;code&gt;</code>
+                    <p> & lt; code & gt; </p>
+                </div>
+                <div class="col">
+                    <kbd>Ctrl</kbd>
+                    <p> kbd </p>
+                </div>
+                <div class="col">
+                    <samp>sample output from a computer program</samp>
+                    <p> samp </p>
+                </div>
+                <div class="col">
+                    <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+                    <p> var </p>
+                </div>
+                <div class="col">
+                    <p role="button" tabindex="0">non-button but pointer when hover</p>
+                    <p>role="button" </p>
+                </div>
+                <div class="col">
+                    <figure>
+                        <blockquote class="blockquote">
+                            <p>blockquote for"quote"</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            figcaption class="blockquote-footer" <cite title="name">cite title</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <ul class="list-unstyled">
+                        <li>ul class="list-unstyled"</li>
+                        <li>nested lists:
+                            <ul>
+                                <li>no class attribute=a bullet</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">ul class="list-inline"</li>
+                        <li class="list-inline-item">li class=</li>
+                        <li class="list-inline-item">"list-inline-item"</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img src="https://cdn-icons-png.flaticon.com/128/763/763775.png" class="img-fluid"
+                        alt="class=img-fluid">
+                        <p>class=img-fluid</p>
+                </div>
+                <div class="col">
+                    <img src="https://cdn-icons-png.flaticon.com/128/763/763775.png" class="img-thumbnail"
+                        alt="class=img-thumbnail">
+                        <p>class=img-thumbnail</p>
+                </div>
+                <div class="col">
+                    <img src="https://cdn-icons-png.flaticon.com/128/763/763775.png" class="rounded float-end"
+                        alt="class=rounded float-end">
+                        <p>class=rounded float-end</p>
+                </div>
+                <div class="col">
+                    <figure class="figure">
+                        <img src="https://cdn-icons-png.flaticon.com/128/763/763775.png" class="figure-img img-fluid rounded">
+                        <figcaption class="figure-caption text-end">figure-img img-fluid rounded</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" id="button">
+            <h2>button class="btn btn-primary"</h2>
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">secondary</button>
+            <button class="btn btn-success">success</button>
+            <button class="btn btn-danger">danger</button>
+            <button class="btn btn-warning">warning</button>
+            <button class="btn btn-info">info</button>
+            <button class="btn btn-light">light</button>
+            <button class="btn btn-dark">dark</button>
+        </div>
+        <div id="table">
+            <table class="table">
+                <caption class="caption-top text-center">caption class=caption-top</caption>
+                <thead>
+                    <tr class="table-active">
+                        <th>class="table-active"</th>
+                        <th>Capital City</th>
+                        <th>Country</th>
+                        <th>Must visit place</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr class="table-success">
+                        <td>success</td>
+                        <td>Amsterdam</td>
+                        <td>Netherlands</td>
+                        <td>Keukenhof</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td>danger</td>
+                        <td>Stockholm</td>
+                        <td>Sweden</td>
+                        <td>Drottningholm Palace</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>info</td>
+                        <td>Helsinki</td>
+                        <td>Finland</td>
+                        <td>Santa Claus Village</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <td>warning</td>
+                        <td>Copenhagen</td>
+                        <td>Denmark</td>
+                        <td>Frederiksborg Castle</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-striped table-bordered border-primary">
+                <tr>
+                    <td>class="table table-striped"</td>
+                    <td>color gray in row 1</td>
+                </tr>
+                <tr>
+                    <td>class="table table-bordered border-primary"</td>
+                    <td>border with color</td>
+                </tr>
+            </table>
+            <table class="table table-striped-columns table-sm">
+                <tr>
+                    <td>class="table table-striped-columns"</td>
+                    <td>color gray in col 2</td>
+                    <td>class="table table-sm"</td>
+                    <td>border only underline</td>
+                </tr>
+            </table>
+            <table class="table table-hover ">
+                <tr class="table-dark">
+                    <td>class="table table-dark table-hover"</td>
+                    <td>color black in row 1</td>
+                    <td>when hover turn grayish</td>
+                </tr>
+                <tr class="vertical-align-middle">
+                    <td>td colspan="2" class="table-success"</td>
+                    <td colspan="2" class="table-success">color only 2 merged columns </td>
+                </tr>
+            </table>
+            <table class="table">
+                <tr class="table-danger">
+                    <td>how to nest a table</td>
+                    <td>
+                        <table class="table mb-0">
+                            <tr>
+                                <td>this one is nested table</td>
+                                <td>inside table</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>inside a table</td>
+                </tr>
+            </table>
+        </div>
+        <div></div>
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>*/ -->
+</body>
+
+</html>
