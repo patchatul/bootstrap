@@ -9,14 +9,19 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <style>
-        #col,
-        .col,
-        .mb-3 {
+        body {
+            margin: 20px;
+        }
+
+        #col {
             border: 2px solid black;
         }
 
-        label {
-            background-color: burlywood;
+        h2 {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: blanchedalmond;
         }
 
         form p {
@@ -89,7 +94,7 @@
                 </div>
             </div>
         </div>
-        <div class="container p-2 bg-info">
+        <div class="container bg-success">
             <h2>div class attribute & values</h2>
             <div class="row justify-content-center align-items-end">
                 <div class="col-sm-2" id="col">
@@ -231,6 +236,7 @@
             <button class="btn btn-info">info</button>
             <button class="btn btn-light">light</button>
             <button class="btn btn-dark">dark</button>
+            <button class="btn btn-outline-primary">btn-outline-primary</button>
             <input type="checkbox" class="btn-check" id="btn-check2" checked autocomplete="off">
             <label class="btn" for="btn-check2">Default checked btn</label>
             <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" checked>
@@ -247,10 +253,47 @@
                 <input type="radio" class="btn-check" name="options-base" id="danger-base" autocomplete="off">
                 <label class="btn btn-outline-danger" for="danger-base">Danger radio</label>
             </div>
+            <div>
+                <button type="button" class="btn btn-primary position-relative">
+                    Inbox
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </button>
+                <p>span class=badge <span class="badge text-bg-secondary">New</span></p>
+                <button type="button" class="btn btn-primary position-relative">
+                    Profile
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                    </span>
+                </button>
+            </div>
+            <div>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Alert!</strong>class="alert alert-warning alert-dismissible fade show" role="alert"
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+                    <symbol id="info-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                    </symbol>
+                </svg>
+                <div class="alert alert-primary d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+                        <use xlink:href="#info-fill" />
+                    </svg>
+                    <div>
+                        alert with an icon svg
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="table">
             <table class="table">
-                <caption class="caption-top text-center">caption class=caption-top</caption>
+                <caption class="caption-top text-center">class=caption-top</caption>
                 <thead>
                     <tr class="table-active">
                         <th>class="table-active"</th>
@@ -261,25 +304,25 @@
                 </thead>
                 <tbody class="table-group-divider">
                     <tr class="table-success">
-                        <td>success</td>
+                        <td>table-success</td>
                         <td>Amsterdam</td>
                         <td>Netherlands</td>
                         <td>Keukenhof</td>
                     </tr>
                     <tr class="table-danger">
-                        <td>danger</td>
+                        <td>table-danger</td>
                         <td>Stockholm</td>
                         <td>Sweden</td>
                         <td>Drottningholm Palace</td>
                     </tr>
                     <tr class="table-info">
-                        <td>info</td>
+                        <td>table-info</td>
                         <td>Helsinki</td>
                         <td>Finland</td>
                         <td>Santa Claus Village</td>
                     </tr>
                     <tr class="table-warning">
-                        <td>warning</td>
+                        <td>table-warning</td>
                         <td>Copenhagen</td>
                         <td>Denmark</td>
                         <td>Frederiksborg Castle</td>
@@ -335,103 +378,148 @@
             <h2>Form</h2>
             <form class="row g-3">
                 <div class="col-md-6">
-                  <label for="inputEmail4" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
                 </div>
                 <div class="col-md-6">
-                  <label for="inputPassword4" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="inputPassword4">
+                    <label for="inputPassword4" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
                 </div>
                 <div class="col-12">
-                  <label for="inputAddress" class="form-label">Address</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <label for="inputAddress" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
                 </div>
                 <div class="col-12">
-                  <label for="inputAddress2" class="form-label">Address 2</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    <label for="inputAddress2" class="form-label">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2"
+                        placeholder="Apartment, studio, or floor">
                 </div>
                 <div class="col-md-6">
-                  <label for="inputCity" class="form-label">City</label>
-                  <input type="text" class="form-control" id="inputCity">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputCity">
                 </div>
                 <div class="col-md-4">
-                  <label for="inputState" class="form-label">State</label>
-                  <select id="inputState" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
+                    <label for="inputState" class="form-label">State</label>
+                    <select id="inputState" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
                 </div>
                 <div class="col-md-2">
-                  <label for="inputZip" class="form-label">Zip</label>
-                  <input type="text" class="form-control" id="inputZip">
+                    <label for="inputZip" class="form-label">Zip code</label>
+                    <input type="text" class="form-control" id="inputZip">
                 </div>
-                <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                      Check me out
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Sign in</button>
-                </div>
-              </form>
-              <form>
-                <div class="row mb-3">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                  <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                  <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3">
-                  </div>
-                </div>
-                <fieldset class="row mb-3">
-                  <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                  <div class="col-sm-10">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                      <label class="form-check-label" for="gridRadios1">
-                        First radio
-                      </label>
+                <fieldset class="row mb-2">
+                    <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                value="option1" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                First radio
+                            </label>
+                        </div>
+                        <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                                value="option3" disabled>
+                            <label class="form-check-label" for="gridRadios3">
+                                disabled radio
+                            </label>
+                        </div>
                     </div>
-                    <div class="form-check disabled">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-                      <label class="form-check-label" for="gridRadios3">
-                        Third disabled radio
-                      </label>
-                    </div>
-                  </div>
                 </fieldset>
-                <div class="row g-3">
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                <div class="col-md-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Check me out
+                        </label>
                     </div>
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </form>
+            <form class="row g-3">
+                <legend>Form validation</legend>
+                <div class="col-md-4">
+                    <label for="validationServer01" class="form-label">First name</label>
+                    <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+                    <div class="valid-feedback">
+                        Looks good!
                     </div>
-                  </div>
-                  <div class="row g-3">
-                    <div class="col-sm-7">
-                      <input type="text" class="form-control" placeholder="City" aria-label="City">
+                </div>
+                <div class="col-md-4">
+                    <label for="validationServer02" class="form-label">Last name</label>
+                    <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
+                    <div class="valid-feedback">
+                        Looks good!
                     </div>
-                    <div class="col-sm">
-                      <input type="text" class="form-control" placeholder="State" aria-label="State">
+                </div>
+                <div class="col-md-4">
+                    <label for="validationServerUsername" class="form-label">Username</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                        <input type="text" class="form-control is-invalid" id="validationServerUsername"
+                            aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                            Please choose a username.
+                        </div>
                     </div>
-                    <div class="col-sm">
-                      <input type="text" class="form-control" placeholder="Zip" aria-label="Zip">
+                </div>
+                <div class="col-md-6">
+                    <label for="validationServer03" class="form-label">City</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer03"
+                        aria-describedby="validationServer03Feedback" required>
+                    <div id="validationServer03Feedback" class="invalid-feedback">
+                        Please provide a valid city.
                     </div>
-                  </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-              </form>
-
-            <form>
-                <legend class="text-center bg-info">Form elements</legend>
-                <p>class='form-control' give textual form controls like inputs/ textareas an upgrade with custom styles,
+                </div>
+                <div class="col-md-3">
+                    <label for="validationServer04" class="form-label">State</label>
+                    <select class="form-select is-invalid" id="validationServer04"
+                        aria-describedby="validationServer04Feedback" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                    <div id="validationServer04Feedback" class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="validationServer05" class="form-label">Zip</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer05"
+                        aria-describedby="validationServer05Feedback" required>
+                    <div id="validationServer05Feedback" class="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3"
+                            aria-describedby="invalidCheck3Feedback" required>
+                        <label class="form-check-label" for="invalidCheck3">
+                            Agree to terms and conditions
+                        </label>
+                        <div id="invalidCheck3Feedback" class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </form>
+            <form class="p-3">
+                <legend class="text-center bg-success">Form elements</legend>
+                <p>class='form-control' give textual form controls like inputs/ textareas an upgrade with custom
+                    styles,
                     sizing, focus states, and more</p>
                 <div class="mb-3">
                     <input class="form-control" type="text" placeholder="Default input-normal size"
@@ -442,19 +530,21 @@
                         aria-label=".form-control-sm ">
                 </div>
                 <div class="mb-3">
-                    <label for="emailInput" class="form-label">Email address class='form-label'</label>
-                    <input type="email" class="form-control" id="emailInput" placeholder="class='form-control'">
+                    <label for="emailInput" class="form-label">Email address label class='form-label'</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="input class='form-control'">
                     <label for="inputPassword" class="form-label">Password</label>
                     <input type="password" id="inputPassword" class="form-control" aria-describedby="passwordHelp">
                     <div id="passwordHelp" class="form-text">
-                        label for >input id, type, class='form-control' aria-describedby='name'>div id='name'
+                        password requirement* label for class="form-label">input id, type, class='form-control'
+                        aria-describedby='name'>div id='name'
                         class='form-text'
                     </div>
-                    <label for="textarea1" class="form-label">Example textarea rows='3'</label>
+                    <label for="textarea1" class="form-label">textarea rows='3'</label>
                     <textarea class="form-control" id="textarea1" rows="3"></textarea>
                 </div>
 
-                <div class="mb-3 row">
+                <div class="mb-3 row border border-primary">
+                    <legend>how to make label + input in 1 line</legend>
                     <p>div class='mb-3 row'>label class="col-sm-2 col-form-label"> div class='col-sm-10'</p>
                     <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
@@ -465,24 +555,48 @@
                         <input type="password" class="form-control" id="inputPassword">
                     </div>
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email div class='form-floating'</label>
+                <div class="p-3 border border-primary">
+                    <legend>How to make label float when type in input</legend>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email div class='form-floating'</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="email" class="form-control is-invalid" id="floatingInputInvalid"
+                            placeholder="name@example.com" value="class=form-control is-invalid">
+                        <label for="floatingInputInvalid">Invalid input </label>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                            style="height: 80px"></textarea>
+                        <label for="floatingTextarea">Comments style="height: 80px"</label>
+                    </div>
                 </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
+                <div class="input-group has-validation border border-primary p-3">
+                    <span class="input-group-text">First and last name</span>
+                    <div class="form-floating is-invalid">
+                        <input type="text" class="form-control is-invalid" id="floatingInputGroup2"
+                            placeholder="Username" required>
+                        <label for="floatingInputGroup2">First name</label>
+                    </div>
+                    <div class="form-floating is-invalid">
+                        <input type="text" class="form-control is-invalid" id="floatingInputGroup2"
+                            placeholder="Username" required>
+                        <label for="floatingInputGroup2">Last name</label>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please div class="input-group has-validation">div+input class="form-floating is-invalid"
+                    </div>
                 </div>
-                <div class="form-floating">
-                <input type="email" class="form-control is-invalid" id="floatingInputInvalid"
-                    placeholder="name@example.com" value="test@example.com">
-                <label for="floatingInputInvalid">Invalid input</label>
-            </div>
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 80px"></textarea>
-                <label for="floatingTextarea">Comments</label>
-              </div>
-                <div class="mb-3 row g-3">
+                <div class="mb-3 row border border-primary">
+                    <legend>How to align input in 1 line</legend>
+                    <p>*div class='row g-3' > div class='col-auto'* > label class="visually-hidden",input type="text"
+                        readonly
+                        class="form-control-plaintext"</p>
                     <div class="col-auto">
                         <label for="staticEmail2" class="visually-hidden">Email</label>
                         <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
@@ -495,40 +609,28 @@
                     <div class="col-auto">
                         <button type="submit" class="btn btn-primary mb-4">Confirm identity</button>
                     </div>
-                    <p>div class='row g-3'>div class='col-auto'>label class="visually-hidden",input type="text" readonly
-                        class="form-control-plaintext"</p>
-                </div>
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="inputText3" class="col-form-label">Text input in 1 row</label>
-                    </div>
-                    <div class="col-auto">
-                        <input type="password" id="inputText3" class="form-control"
-                            aria-describedby="passwordHelpInline">
-                    </div>
-                    <div class="col-auto">
-                        <span id="passwordHelpInline" class="form-text">
-                            div class='row g-3 align-items-center'>div class='col-auto'
-                        </span>
-                    </div>
+
                 </div>
                 <div class="mb-3">
-                    <label for="formFile" class="form-label">Default file input example</label>
-                    <input class="form-control" type="file" id="formFile">
-                    <p>input type='file' class='form-control +form-control-sm/-lg' disabled multiple</p>
-                    <div class="input-group mb-3">
-                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                        <input type="file" class="form-control" id="inputGroupFile01">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="file" class="form-control border-primary" id="inputGroupFile02">
-                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFile04"
-                            aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                        <button class="btn btn-outline-secondary" type="button"
-                            id="inputGroupFileAddon04">Button</button>
+                    <div class="border border-primary p-3">
+                        <label for="formFile" class="form-label">Default file input</label>
+                        <input class="form-control" type="file" id="formFile">
+                        <p>inside div > label > input type='file' class='form-control +form-control-sm/-lg' disabled
+                            multiple</p>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                            <input type="file" class="form-control" id="inputGroupFile01">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="inputGroupFile02">
+                            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="inputGroupFile04"
+                                aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                            <button class="btn btn-outline-secondary" type="button"
+                                id="inputGroupFileAddon04">Button</button>
+                        </div>
                     </div>
 
                     <label for="exampleColorInput" class="form-label">Color picker</label>
@@ -539,7 +641,9 @@
                     <label for="customRange3" class="form-label">Range input type="range" class="form-range" min="0"
                         max="5" step="0.5"</label>
                     <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
-                    <label for="exampleDataList" class="form-label">Datalist example</label>
+
+                    <legend class="text-center">Datalist examples</legend>
+                    <label for="exampleDataList" class="form-label">default datalist</label>
                     <input class="form-control" list="datalistOptions" id="exampleDataList"
                         placeholder="Type to search...">
                     <datalist id="datalistOptions">
@@ -554,7 +658,6 @@
                         <button type="button" class="btn btn-outline-secondary">Action</button>
                         <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="visually-hidden">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -575,58 +678,293 @@
                             <option value="3">Three</option>
                         </select>
                         <button class="btn btn-outline-secondary" type="button">Button</button>
+                        <p>button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                            data-bs-toggle="dropdown" aria-expanded="false" >> ul class="dropdown-menu
+                            dropdown-menu-end">
+                            li> a class="dropdown-item / hr class="dropdown-divider / span</p>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">$</span>
-                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                        <span class="input-group-text">.00</span>
-                    </div>
-                    <div class="input-group has-validation">
-                        <span class="input-group-text">First and last name</span>
-                        <div class="form-floating is-invalid">
-                          <input type="text" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Username" required>
-                          <label for="floatingInputGroup2">First name</label>
-                        </div>
-                        <div class="form-floating is-invalid">
-                            <input type="text" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Username" required>
-                            <label for="floatingInputGroup2">Last name</label>
-                          </div>
-                        <div class="invalid-feedback">
-                          Please div class="input-group has-validation">div+input class="form-floating is-invalid"
-                        </div>
-                      </div>
-                    <div class="mb-3">
+
+                    <div class="mb-3 border border-primary">
+                        <p>div class="input-group"> span class="input-group-text" > input </p>
                         <label for="basic-url" class="form-label">Your vanity URL</label>
                         <div class="input-group">
                             <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
                             <input type="text" class="form-control" id="basic-url"
                                 aria-describedby="basic-addon3 basic-addon4">
                         </div>
-                        <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-text">.00</span>
+                        </div>
                     </div>
                 </div>
+                <div>
+                    <div class="accordion" id="accordionExample">
+                        <p>Accordion div class="accordion"> div class="accordion-item"> 1ST ITEM button button
+                            class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true/false" aria-controls="collapseOne" > TO
+                            SHOW WHEN OPEN div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample"</p>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Default 1
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    shown by default button data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne"- div id="collapseOne" class="accordion-collapse collapse
+                                    show"
+                                    data-bs-parent="#accordionExample" > div class="accordion-body"
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Accordion 2
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" *aria-expanded="false"* aria-controls="collapseTwo"
+                                    >>div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="mb-3">
-                    <p>attribute= disabled readonly checked :indeterminate in js</p>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">div class="form-check-inline"</label>
+                    <div class="mb-3">
+                        <legend>attribute= disabled readonly checked :indeterminate in js</legend>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">div class="form-check-inline"</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+                            <label class="form-check-label" for="disabledFieldsetCheck">
+                                Can't check disabled attribute in input
+                            </label>
+                        </div>
+                        <input class="form-control" type="text" value="readonly input attribute..."
+                            aria-label="readonly input example" readonly>
+                        <div class="form-check form-switch form-check-reverse">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+                            <label class="form-check-label" for="flexSwitchCheckReverse">div class='form-check-reverse
+                                form-switch'</label>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-                        <label class="form-check-label" for="disabledFieldsetCheck">
-                            Can't check disabled attribute in input
-                        </label>
+                    <div>
+                        <div class="card text-center mb-3" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">class="card"</h5>
+                                <p class="card-text">card-title > card-text</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <img src="https://cdn-icons-png.flaticon.com/128/763/763775.png" class="card-img-top"
+                                alt="...">
+                            <div class="card-body bg-light">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">img class="card-img-top"</p>
+                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card text-bg-dark">
+                            <img src="https://cdn-icons-png.flaticon.com/128/763/763775.png" class="card-img img"
+                                alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">img card title</h5>
+                                <p class="card-text">div class="card-img-overlay"</p>
+                            </div>
+                        </div>
                     </div>
-                    <input class="form-control" type="text" value="readonly input attribute..."
-                        aria-label="readonly input example" readonly>
-                    <div class="form-check form-switch form-check-reverse">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
-                        <label class="form-check-label" for="flexSwitchCheckReverse">div class='form-check-reverse
-                            form-switch'</label>
+                    <legend>Carousel class="carousel slide" data-bs-ride="carousel/true" </legend>
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h2>Slide 1 data-bs-ride="carousel"</h2>
+                            </div>
+                            <div class="carousel-item">
+                                <h2>Slide 2</h2>
+                            </div>
+                            <div class="carousel-item">
+                                <h2>Slide 3</h2>
+                            </div>
+                        </div>
                     </div>
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h2>Slide 1</h2>
+                            </div>
+                            <div class="carousel-item">
+                                <h2>Slide 2</h2>
+                            </div>
+                            <div class="carousel-item">
+                                <h2>Slide 3</h2>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Modal
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    button data-bs-toggle="modal" data-bs-target="#exampleModal" >> div class="modal
+                                    fade" id="exampleModal">
+                                    div class="modal-dialog">class="modal-content">class="modal-header"*h1
+                                    class="modal-title">class="modal-body">class="modal-footer"*button
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                        <span role="status">Loading...</span>
+                    </button>
+                    <div class="spinner-grow text-dark" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Top popover">
+                        Popover on top
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="right" data-bs-content="Right popover">
+                        Popover on right
+                    </button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both
+                        scrolling & backdrop</button>
 
-                </div>
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
+                        id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p>Try scrolling the rest of the page to see this option in action.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <img src="..." class="rounded me-2" alt="...">
+                                <strong class="me-auto">Bootstrap</strong>
+                                <small>11 mins ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Hello, world! This is a toast message.
+                            </div>
+                        </div>
+                    </div>
+                    <p>progress bar:20%</p>
+                    <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10"
+                        aria-valuemin="0" aria-valuemax="100">
+
+                        <div class="progress-bar progress-bar-striped" style="width: 20%"></div>
+                    </div>
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Navbar</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <div class="navbar-nav">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    <a class="nav-link" href="#">Features</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div>
+                        <div class="row">
+                            <div class="col-4">
+                                <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                                    <nav class="nav nav-pills flex-column">
+                                        <a class="nav-link" href="#item-1">Item 1</a>
+                                        <nav class="nav nav-pills flex-column">
+                                            <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+                                        </nav>
+                                    </nav>
+                                </nav>
+                            </div>
+
+                            <div class="col-8">
+                                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
+                                    class="scrollspy-example-2" tabindex="0">
+                                    <div id="item-1">
+                                        <h4>Item 1</h4>
+                                        <p>div class="row">div class="col-4"></p>
+                                    </div>
+                                    <div id="item-1-1">
+                                        <h5>Item 1-1</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor
+                                            congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus
+                                            malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra
+                                            imperdiet enim.</p>
+                                    </div>
+                                    <div id="item-1-2">
+                                        <h5>Item 1-2</h5>
+                                        <p>This is some placeholder content for the scrollspy page. Note that as you
+                                            scroll down the page, the appropriate navigation link is highlighted.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
     </main>
     <footer>
 
@@ -637,6 +975,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+    <script>
+        /* for Show live toast button */
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+
+        if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+            toastTrigger.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        }
+    </script>
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>*/ -->
 </body>
 
